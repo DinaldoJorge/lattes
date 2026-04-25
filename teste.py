@@ -39,7 +39,9 @@ with col_left:
     subcol1, subcol2 = st.columns([1,4])
 
     with subcol1:
-        st.image("teste.png", width=800)
+    st.markdown("<div style='margin-top:40px;'>", unsafe_allow_html=True)
+    st.image("teste.png", width=800)
+    st.markdown("</div>", unsafe_allow_html=True)
 
     with subcol2:
         st.markdown("""
