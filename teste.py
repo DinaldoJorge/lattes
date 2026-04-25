@@ -9,7 +9,7 @@ with col_top2:
 col1, col2 = st.columns([1,2])
 
 with col1:
-    st.write("Nome Dinaldo Jorge Guedes Santos")
+    st.write("Nome Dinaldo Jorge")
     st.image("teste.png")
     st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
 
