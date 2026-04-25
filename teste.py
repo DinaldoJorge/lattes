@@ -1,6 +1,11 @@
 import streamlit as st
 
-st.image("star.png")
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.image("star.png")
+
+
 
 st.image("teste.png")
 st.write("Site Lattes")
