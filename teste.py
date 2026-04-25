@@ -16,23 +16,27 @@ col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
     st.markdown(f"""
-        <div style="text-align: center; margin-bottom: 40px;">
+        <div style="text-align: center; margin-bottom: 50px;">
             <a href="https://starlink.com/" target="_blank">
                 <img src="data:image/png;base64,{img_base64}" 
-                     width="300" 
-                     style="border-radius:10px; margin-bottom:20px;">
+                     width="320" 
+                     style="border-radius:12px;">
             </a>
         </div>
     """, unsafe_allow_html=True)
 
-# ABAIXO
-col_left, col_right = st.columns([2,1])
+# LAYOUT PRINCIPAL (mais espaço pro conteúdo)
+col_left, col_right = st.columns([3,1])
 
 with col_left:
-    st.markdown("<div style='margin-bottom:15px; font-size:22px;'><b>Nome Dinaldo Jorge</b></div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div style='margin-bottom:20px; font-size:24px;'>
+        <b>Nome Dinaldo Jorge</b>
+    </div>
+    """, unsafe_allow_html=True)
 
-    # subcolunas (imagem + texto)
-    subcol1, subcol2 = st.columns([1,3])
+    # subcolunas (imagem menor + texto bem maior)
+    subcol1, subcol2 = st.columns([1,4])
 
     with subcol1:
         st.image("teste.png")
@@ -42,7 +46,9 @@ with col_left:
         <div style="
             text-align: justify;
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.7;
+            width: 100%;
+            max-width: none;
         ">
             <b>Sobre Dinaldo:</b><br><br>
 
@@ -52,7 +58,7 @@ with col_left:
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("<div style='margin-top:20px;'>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top:25px;'>", unsafe_allow_html=True)
     st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
     st.markdown("</div>", unsafe_allow_html=True)
 
