@@ -30,7 +30,7 @@ col_left, col_right = st.columns([3,1])
 
 with col_left:
     st.markdown("""
-    <div style='margin-bottom:20px; font-size:24px;'>
+    <div style='margin-bottom:30px; font-size:30px;'>
         <b>Nome Dinaldo Jorge</b>
     </div>
     """, unsafe_allow_html=True)
@@ -39,7 +39,7 @@ with col_left:
     subcol1, subcol2 = st.columns([1,4])
 
     with subcol1:
-        st.image("teste.png", width=600)
+        st.image("teste.png", width=800)
 
     with subcol2:
         st.markdown("""
@@ -58,7 +58,7 @@ with col_left:
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("<div style='margin-top:25px;'>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top:30px;'>", unsafe_allow_html=True)
     st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
     st.markdown("</div>", unsafe_allow_html=True)
 
