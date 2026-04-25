@@ -1,42 +1,36 @@
 import streamlit as st
+import base64
 
-# CONFIGURAÇÃO
+# CONFIG
 st.set_page_config(page_title="Perfil", layout="wide")
 
-# CSS para deixar a imagem clicável
-st.markdown("""
-<style>
-.link-img {
-    display: flex;
-    justify-content: center;
-}
-.link-img a {
-    text-decoration: none;
-}
-</style>
-""", unsafe_allow_html=True)
+# FUNÇÃO para converter imagem em base64
+def get_base64_image(path):
+    with open(path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
 
-# TOPO (imagem centralizada + link)
-col_top1, col_top2, col_top3 = st.columns([1,2,1])
+# converter a imagem
+img_base64 = get_base64_image("star.png")
 
-with col_top2:
-    st.markdown('<div class="link-img">', unsafe_allow_html=True)
-    
-    # imagem normal (garante que carrega)
-    st.image("star.png", width=300)
-    
-    # botão invisível abaixo (funciona como link)
-    st.link_button("🔗 Acessar Starlink", "https://starlink.com/")
-    
-    st.markdown('</div>', unsafe_allow_html=True)
+# TOPO (imagem clicável)
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.markdown(f"""
+        <div style="text-align: center;">
+            <a href="https://starlink.com/" target="_blank">
+                <img src="data:image/png;base64,{img_base64}" width="300" style="border-radius:10px;">
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
 
 # ABAIXO
-col1, col2 = st.columns([1,2])
+col_left, col_right = st.columns([1,2])
 
-with col1:
+with col_left:
     st.write("Nome Dinaldo Jorge")
     st.image("teste.png")
     st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
 
-with col2:
+with col_right:
     st.empty()
