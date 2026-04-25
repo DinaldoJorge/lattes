@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.image("teste.png")
+st.image("star.png")
 
 st.image("teste.png")
 st.write("Site Lattes")
