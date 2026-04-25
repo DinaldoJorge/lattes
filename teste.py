@@ -38,13 +38,21 @@ with col_left:
     # subcolunas
     subcol1, subcol2 = st.columns([1,4])
 
-    # IMAGEM (como você queria antes)
+    # 🔧 ÚNICA MUDANÇA AQUI (centralização vertical)
     with subcol1:
-        st.markdown("<div style='margin-top:40px;'>", unsafe_allow_html=True)
+        st.markdown("""
+        <div style="
+            display: flex;
+            align-items: center;
+            height: 100%;
+        ">
+        """, unsafe_allow_html=True)
+
         st.image("teste.png", width=800)
+
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # TEXTO
+    # TEXTO (mantido igual)
     with subcol2:
         st.markdown("""
         <div style="
