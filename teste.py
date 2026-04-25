@@ -25,7 +25,7 @@ with col2:
         </div>
     """, unsafe_allow_html=True)
 
-# LAYOUT PRINCIPAL (mais espaço pro conteúdo)
+# LAYOUT PRINCIPAL
 col_left, col_right = st.columns([3,1])
 
 with col_left:
@@ -35,14 +35,16 @@ with col_left:
     </div>
     """, unsafe_allow_html=True)
 
-    # subcolunas (imagem menor + texto bem maior)
-    subcol1, subcol2 = st.columns([1,4])
+    # subcolunas
+    subcol1, subcol2 = st.columns([1.5,4])
 
+    # IMAGEM (corrigido + alinhamento vertical)
     with subcol1:
-    st.markdown("<div style='margin-top:40px;'>", unsafe_allow_html=True)
-    st.image("teste.png", width=800)
-    st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown("<div style='margin-top:40px;'>", unsafe_allow_html=True)
+        st.image("teste.png", width=500)
+        st.markdown("</div>", unsafe_allow_html=True)
 
+    # TEXTO
     with subcol2:
         st.markdown("""
         <div style="
@@ -52,11 +54,14 @@ with col_left:
             width: 100%;
             max-width: none;
         ">
-            <b>Sobre Dinaldo:<br>
+            <b>Sobre Dinaldo:</b><br><br>
+
             Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações,
             destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade
-            e suporte de TI.Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em
-            redes, segurança digital e administração de sistemas.
+            e suporte de TI.<br><br>
+
+            Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em redes,
+            segurança digital e administração de sistemas.
         </div>
         """, unsafe_allow_html=True)
 
