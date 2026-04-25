@@ -52,9 +52,9 @@ with col_left:
         ">
             <b>Sobre Dinaldo:</b><br><br>
 
-            Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade e suporte de TI.<br><br>
-
-            Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em redes, segurança digital e administração de sistemas.
+            Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica
+            e expertise em infraestrutura de rede, conectividade e suporte de TI.Com vasta vivência no mercado, busca posições que exijam   soluções
+            inovadoras em redes, segurança digital e administração de sistemas.
         </div>
         """, unsafe_allow_html=True)
 
