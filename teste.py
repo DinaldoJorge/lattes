@@ -45,16 +45,16 @@ with col_left:
         st.markdown("""
         <div style="
             text-align: justify;
-            font-size: 18px;
-            line-height: 1.7;
+            font-size: 20px;
+            line-height: 2.0;
             width: 100%;
             max-width: none;
         ">
             <b>Sobre Dinaldo:</b><br><br>
-
-            Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica
-            e expertise em infraestrutura de rede, conectividade e suporte de TI.Com vasta vivência no mercado, busca posições que exijam   soluções
-            inovadoras em redes, segurança digital e administração de sistemas.
+            Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações,
+            destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade
+            e suporte de TI.Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em
+            redes, segurança digital e administração de sistemas.
         </div>
         """, unsafe_allow_html=True)
 
