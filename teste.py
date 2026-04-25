@@ -11,7 +11,7 @@ def get_base64_image(path):
 
 img_base64 = get_base64_image("star.png")
 
-# TOPO (imagem clicável com espaço abaixo)
+# TOPO (imagem clicável)
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
@@ -30,9 +30,22 @@ col_left, col_right = st.columns([1,2])
 
 with col_left:
     st.markdown("<div style='margin-bottom:10px;'>Nome Dinaldo Jorge</div>", unsafe_allow_html=True)
-    
-    st.image("teste.png")
-    
+
+    # SUBCOLUNAS (imagem + texto lado a lado)
+    subcol1, subcol2 = st.columns([1,2])
+
+    with subcol1:
+        st.image("teste.png")
+
+    with subcol2:
+        st.markdown("""
+        **Sobre Dinaldo:**
+
+        Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade e suporte de TI. 
+
+        Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em redes, segurança digital e administração de sistemas.
+        """)
+
     st.markdown("<div style='margin-top:15px;'>", unsafe_allow_html=True)
     st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
     st.markdown("</div>", unsafe_allow_html=True)
