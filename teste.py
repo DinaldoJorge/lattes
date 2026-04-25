@@ -10,6 +10,7 @@ def get_base64_image(path):
         return base64.b64encode(img_file.read()).decode()
 
 img_base64 = get_base64_image("star.png")
+zap_base64 = get_base64_image("zap2026.png")
 
 # TOPO (imagem clicável)
 col1, col2, col3 = st.columns([1,2,1])
@@ -38,7 +39,7 @@ with col_left:
     # subcolunas
     subcol1, subcol2 = st.columns([1,4])
 
-    # 🔧 ÚNICA MUDANÇA AQUI (centralização vertical)
+    # IMAGEM (centralizada verticalmente)
     with subcol1:
         st.markdown("""
         <div style="
@@ -52,7 +53,7 @@ with col_left:
 
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # TEXTO (mantido igual)
+    # TEXTO
     with subcol2:
         st.markdown("""
         <div style="
@@ -76,3 +77,12 @@ with col_left:
 
 with col_right:
     st.empty()
+
+# 🔥 NOVO BLOCO (WhatsApp clicável no final)
+st.markdown(f"""
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="https://wa.me/5583998234415" target="_blank">
+            <img src="data:image/png;base64,{zap_base64}" width="80">
+        </a>
+    </div>
+""", unsafe_allow_html=True)
