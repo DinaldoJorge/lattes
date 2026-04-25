@@ -11,7 +11,7 @@ def get_base64_image(path):
 
 img_base64 = get_base64_image("star.png")
 
-# TOPO
+# TOPO (imagem clicável)
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
@@ -25,13 +25,13 @@ with col2:
         </div>
     """, unsafe_allow_html=True)
 
-# 👇 AQUI FOI AJUSTADO
-col_left, col_right = st.columns([2,1])  # mais espaço pra esquerda
+# ABAIXO
+col_left, col_right = st.columns([2,1])
 
 with col_left:
-    st.markdown("<div style='margin-bottom:10px;'>Nome Dinaldo Jorge</div>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-bottom:15px; font-size:22px;'><b>Nome Dinaldo Jorge</b></div>", unsafe_allow_html=True)
 
-    # 👇 subcolunas também mais equilibradas
+    # subcolunas (imagem + texto)
     subcol1, subcol2 = st.columns([1,3])
 
     with subcol1:
@@ -39,14 +39,20 @@ with col_left:
 
     with subcol2:
         st.markdown("""
-        **Sobre Dinaldo:**
+        <div style="
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+        ">
+            <b>Sobre Dinaldo:</b><br><br>
 
-        Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade e suporte de TI.
+            Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade e suporte de TI.<br><br>
 
-        Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em redes, segurança digital e administração de sistemas.
-        """)
+            Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em redes, segurança digital e administração de sistemas.
+        </div>
+        """, unsafe_allow_html=True)
 
-    st.markdown("<div style='margin-top:15px;'>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top:20px;'>", unsafe_allow_html=True)
     st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
     st.markdown("</div>", unsafe_allow_html=True)
 
