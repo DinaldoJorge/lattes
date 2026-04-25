@@ -11,7 +11,7 @@ def get_base64_image(path):
 
 img_base64 = get_base64_image("star.png")
 
-# TOPO (imagem clicável)
+# TOPO
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
@@ -25,14 +25,14 @@ with col2:
         </div>
     """, unsafe_allow_html=True)
 
-# ABAIXO
-col_left, col_right = st.columns([1,2])
+# 👇 AQUI FOI AJUSTADO
+col_left, col_right = st.columns([2,1])  # mais espaço pra esquerda
 
 with col_left:
     st.markdown("<div style='margin-bottom:10px;'>Nome Dinaldo Jorge</div>", unsafe_allow_html=True)
 
-    # SUBCOLUNAS (imagem + texto lado a lado)
-    subcol1, subcol2 = st.columns([1,2])
+    # 👇 subcolunas também mais equilibradas
+    subcol1, subcol2 = st.columns([1,3])
 
     with subcol1:
         st.image("teste.png")
@@ -41,7 +41,7 @@ with col_left:
         st.markdown("""
         **Sobre Dinaldo:**
 
-        Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade e suporte de TI. 
+        Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações, destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade e suporte de TI.
 
         Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em redes, segurança digital e administração de sistemas.
         """)
