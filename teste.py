@@ -39,7 +39,7 @@ with col_left:
     subcol1, subcol2 = st.columns([1,4])
 
     with subcol1:
-        st.image("teste.png")
+        st.image("teste.png", width=350)
 
     with subcol2:
         st.markdown("""
